@@ -1,0 +1,293 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{enumitem}
+\setcounter{secnumdepth}{1}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\title{AI Assignment01}
+
+
+
+
+\begin{document}
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.20]{logo.jpeg}\\[1.0 cm]	% University Logo
+    \textsc{\LARGE  National Institute of Technology\newline\newline Raipur}\\[2.0 cm]	% University Name
+	\textsc{\Large assignment 01}\\[0.5 cm]				% Course Code
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Submitted To:}\\
+			Dr.Saurabh Gupta\\
+            Asst. Professor\\
+            Department of Biomedical Engineering\\
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+            
+			\begin{flushright} \large
+			\emph{Submitted By :} \\
+			MB Sai Krishna\\
+            21111027\\
+        Fifth Semester\\
+        Biomedical Engineering\\
+		\end{flushright}
+        
+	\end{minipage}\\[2 cm]
+	
+
+\end{titlepage}
+
+\maketitle
+
+\section{Supervised Learning}
+Supervised learning is a type of machine learning where the algorithm is trained on labeled data. In supervised learning, the dataset used for training consists of input data (features) and corresponding output labels (target). The goal of supervised learning is to learn a mapping or relationship between the input data and the target labels so that the algorithm can make accurate predictions on new, unseen data.
+
+\subsection{Process of Supervised Learning-:}
+The process of supervised learning involves the following steps:
+
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Data Collection}: Obtain a dataset containing input features and their corresponding target labels. The data should be labeled, meaning each data point is associated with the correct output value.
+    
+    \item \textbf{Data Preprocessing}: Clean and preprocess the data to handle missing values, normalize or scale features, and perform any other necessary data transformations.
+    
+    \item \textbf{Model Selection}: Choose an appropriate machine learning algorithm suitable for the specific task. The choice of algorithm depends on the nature of the problem, data, and desired outcome (e.g., regression or classification).
+    
+    \item \textbf{Model Training}: Split the labeled dataset into two parts: the training set and the testing set. The training set is used to train the model by adjusting its parameters to minimize the error between the predicted output and the actual output labels.
+    
+    \item \textbf{Model Evaluation}: After training the model, evaluate its performance on the testing set, which the model has never seen during training. Common evaluation metrics include accuracy, mean squared error, precision, recall, and F1 score, depending on the type of problem (classification or regression).
+    
+    \item \textbf{Model Deployment}: Once the model has been trained and evaluated, it can be used to make predictions on new, unseen data.
+\end{enumerate}
+
+\subsection{Applications of Supervised Learning}
+Supervised learning is widely used in various real-world applications, such as:
+\begin{itemize}
+    \item Image classification
+    \item Sentiment analysis
+    \item Speech recognition
+    \item Medical diagnosis
+    \item and many others.
+\end{itemize}
+
+\subsection\item\textbf{The five best algorithms of Supervised learning}
+
+\subsection{1.Linear Regression}
+Linear Regression is a simple algorithm used for regression tasks. It aims to find the best-fitting linear relationship between the input features and the target variable. The linear regression model is represented as:
+
+\[ y = \beta_0 + \beta_1x_1 + \beta_2x_2 + ... + \beta_nx_n \]
+
+where \( y \) is the predicted target variable, \( x_1, x_2, ..., x_n \) are the input features, and \( \beta_0, \beta_1, \beta_2, ..., \beta_n \) are the coefficients to be learned. The model is trained to minimize the mean squared error between the predicted and actual target values.
+
+\subsubsection{Application of Linear Regression}
+Linear regression is commonly used in predicting continuous numerical values, such as predicting house prices based on features like area, number of rooms, etc.
+
+\subsection{2.Decision Trees}
+Decision Trees are versatile and interpretable algorithms used for both regression and classification tasks. The algorithm recursively splits the data based on features to make predictions. At each internal node of the tree, the algorithm selects the feature that best separates the data into different classes or regression values. The process continues until a stopping criterion, such as a maximum depth or minimum number of data points per leaf, is reached.
+
+\subsubsection{Application of Decision Trees}
+Decision trees are used in various fields, including customer churn prediction, medical diagnosis, and credit risk assessment.
+
+\subsection{3.Random Forest}
+Random Forest is an ensemble method that combines multiple decision trees to improve prediction accuracy and generalization. Each tree in the forest is trained on a random subset of the data and a random subset of the features. The final prediction is obtained by averaging the predictions of all the individual trees in the forest (for regression tasks) or taking a majority vote (for classification tasks).
+
+\subsubsection{Application of Random Forest}
+Random Forest is widely used in applications such as image classification, fraud detection, and stock market prediction.
+
+\subsection{4.Support Vector Machines (SVM)}
+Support Vector Machines (SVM) is a powerful algorithm used for both classification and regression tasks. SVM aims to find the optimal hyperplane that best separates data points of different classes. In the case of non-linearly separable data, SVM can use the kernel trick to map the data into a higher-dimensional space, where a separating hyperplane can be found.
+
+\subsubsection{Application of Support Vector Machines}
+SVM is used in various domains, including text classification, image recognition, and bioinformatics.
+
+\subsection{5.Gradient Boosting Machines (GBM)}
+Gradient Boosting Machines (GBM) is another ensemble technique that builds multiple weak learners (e.g., decision trees) sequentially. Each weak learner focuses on the mistakes made by the previous learners, and the final prediction is obtained by adding the weighted predictions of all the learners. GBM is known for its high accuracy and robustness.
+
+\subsubsection{Application of Gradient Boosting Machines}
+GBM is applied in web search ranking, recommendation systems, and anomaly detection.
+
+
+
+\section{Unsupervised Learning}
+Unsupervised learning is a type of machine learning where the algorithm is trained on unlabeled data. Unlike supervised learning, unsupervised learning does not have access to target labels or output information. The goal of unsupervised learning is to find patterns, relationships, or structure within the data without explicit guidance on what to learn.
+
+In unsupervised learning, the algorithm explores the data to discover inherent patterns or groupings, often referred to as clusters or representations. The algorithm aims to identify similarities and differences between data points based solely on their features, without knowledge of their corresponding categories or labels.
+
+\subsection{Main Tasks in Unsupervised Learning}
+The main task in unsupervised learning is to uncover the underlying structure in the data and gain insights into the distribution and relationships between different data points. Some common applications of unsupervised learning include:
+
+\begin{itemize}
+    \item \textbf{Clustering}: Clustering algorithms group similar data points together based on the similarity of their features. The goal is to identify natural clusters within the data without any prior information about the number or nature of clusters.
+    
+    \item \textbf{Dimensionality Reduction}: Dimensionality reduction methods aim to reduce the number of features or variables in the data while preserving as much relevant information as possible. Principal Component Analysis (PCA) and t-distributed Stochastic Neighbor Embedding (t-SNE) are common techniques for dimensionality reduction.
+    
+    \item \textbf{Density Estimation}: Density estimation methods model the underlying probability distribution of the data. Gaussian Mixture Models (GMM) and Kernel Density Estimation (KDE) are examples of density estimation techniques.
+    
+    \item \textbf{Anomaly Detection}: Anomaly detection algorithms identify data points that are significantly different from the majority of the data, often referred to as outliers.
+\end{itemize}
+
+Unsupervised learning plays a crucial role in exploratory data analysis and is beneficial when dealing with large datasets with no labeled examples. It helps reveal patterns and insights that can inform further analysis and decision-making.
+
+While unsupervised learning can be powerful in discovering underlying patterns, its lack of explicit labels can make evaluation and interpretation more challenging than supervised learning tasks. Additionally, the usefulness of the discovered patterns often depends on the domain knowledge and expertise of the data analyst or researcher.
+
+\subsection\item\textbf{The five best algorithms of Unsupervised learning}
+
+
+\subsection{1.K-Means Clustering}
+K-Means Clustering is a popular algorithm that divides data into K clusters, where each data point belongs to the cluster with the nearest mean. The algorithm works as follows:
+
+1. Randomly initialize K cluster centroids.
+2. Assign each data point to the nearest centroid based on distance.
+3. Recalculate the centroids based on the mean of the data points in each cluster.
+4. Repeat steps 2 and 3 until convergence.
+
+\subsubsection{Application of K-Means Clustering}
+K-Means Clustering is commonly used in customer segmentation, image compression, and anomaly detection.
+
+\subsection{2.Hierarchical Clustering}
+Hierarchical Clustering creates a tree-like hierarchical representation of data, making it suitable for exploring different levels of granularity in the clusters. The algorithm works by merging or splitting clusters in a hierarchical manner.
+
+\subsubsection{Application of Hierarchical Clustering}
+Hierarchical Clustering is used in gene expression analysis, document clustering, and taxonomy creation.
+
+\subsection{3.Gaussian Mixture Model (GMM)}
+Gaussian Mixture Model (GMM) is a probabilistic model that assumes data is generated from a mixture of several Gaussian distributions. GMM represents the data as a combination of multiple Gaussian components, each associated with a weight.
+
+\subsubsection{Application of Gaussian Mixture Model}
+GMM is applied in image segmentation, speech recognition, and anomaly detection.
+
+\subsection{4.Principal Component Analysis (PCA)}
+Principal Component Analysis (PCA) is a dimensionality reduction technique that finds orthogonal axes (principal components) that capture the most significant variance in the data. It transforms the data into a lower-dimensional space while preserving as much variance as possible.
+
+\subsubsection{Application of Principal Component Analysis}
+PCA is commonly used for data visualization, feature extraction, and noise reduction.
+
+\subsection{5.Autoencoders}
+Autoencoders are neural network architectures used for feature learning and data compression. They consist of an encoder network that maps the input data into a lower-dimensional representation (encoding) and a decoder network that reconstructs the original data from the encoding.
+
+\subsubsection{Application of Autoencoders}
+Autoencoders are used in image denoising, dimensionality reduction, and anomaly detection.
+
+
+
+\section{Reinforcement Learning}
+Reinforcement learning is a type of machine learning where an agent learns to make decisions by interacting with an environment. The agent receives feedback in the form of rewards or penalties based on its actions, and the goal is to learn a policy that maximizes the cumulative reward over time.
+
+\subsection{Markov Decision Process (MDP)}
+The environment in reinforcement learning is typically represented as a Markov Decision Process (MDP), consisting of the following components:
+
+\begin{itemize}
+    \item \textbf{State (S)}: A set of possible states that the environment can be in. Each state represents a specific configuration or situation.
+    
+    \item \textbf{Action (A)}: A set of possible actions that the agent can take to interact with the environment. The agent's actions influence the next state and the reward received.
+    
+    \item \textbf{Transition Function (T)}: A function that specifies the probability of transitioning from one state to another state given a specific action.
+    
+    \item \textbf{Reward Function (R)}: A function that defines the immediate reward or penalty received by the agent for taking a particular action in a specific state.
+    
+    \item \textbf{Policy ($\pi$)}: The strategy or mapping from states to actions that the agent uses to make decisions. The policy guides the agent's behavior in the environment.
+\end{itemize}
+
+\subsection{Objective of Reinforcement Learning}
+The primary objective of reinforcement learning is to find an optimal policy ($\pi^*$) that maximizes the expected cumulative reward over time, often referred to as the return. The return is typically discounted to prioritize immediate rewards over future rewards. The discount factor ($\gamma$) determines the importance of future rewards in comparison to immediate rewards.
+
+\subsection{Reinforcement Learning Algorithms}
+Reinforcement learning algorithms learn from trial and error. The agent interacts with the environment, observes the rewards, and updates its policy based on the experienced rewards. There are two main types of reinforcement learning algorithms:
+
+\begin{itemize}
+    \item \textbf{Model-based algorithms}: These algorithms build a model of the environment, including the transition function and reward function, to plan and make decisions.
+    
+    \item \textbf{Model-free algorithms}: These algorithms directly learn a policy from experience without explicitly modeling the environment.
+\end{itemize}
+
+\subsection{Applications of Reinforcement Learning}
+Reinforcement learning has shown significant success in various applications, including:
+\begin{itemize}
+    \item Game playing (e.g., AlphaGo)
+    \item Robotic control
+    \item Autonomous vehicles
+    \item Recommendation systems
+    \item and more.
+\end{itemize}
+
+Reinforcement learning is particularly useful in scenarios where the optimal strategy is not known in advance, and the agent must explore and learn from its interactions with the environment.
+\newpage
+\subsection\item\textbf{The five best algorithms of Reinforcement learning}
+
+
+
+\subsection{1.Q-Learning}
+Q-Learning is one of the foundational algorithms in reinforcement learning. It is a model-free technique used for discrete action spaces. Q-Learning aims to learn the Q-values, which represent the expected cumulative rewards for taking a specific action in a given state. The algorithm updates the Q-values based on the rewards received and the maximum Q-value of the next state.
+
+\subsubsection{Application of Q-Learning}
+Q-Learning is widely used in various applications, including robot control, game playing, and optimization problems.
+
+\subsection{2.Deep Q Networks (DQN)}
+Deep Q Networks (DQN) is an extension of Q-Learning that employs deep neural networks to approximate the Q-value function. It is suitable for handling high-dimensional state spaces, such as images or continuous sensor readings. DQN uses a replay buffer and target networks to stabilize and accelerate learning.
+
+\subsubsection{Application of Deep Q Networks}
+DQN has been successfully applied in playing video games, autonomous driving, and robotic control.
+
+\subsection{3.Proximal Policy Optimization (PPO)}
+Proximal Policy Optimization (PPO) is a popular policy optimization algorithm. Unlike Q-Learning, PPO directly learns a policy rather than Q-values. PPO aims to update the policy gradually to improve stability during learning. It uses a surrogate objective function and clipping to ensure small policy updates and prevent large policy deviations.
+
+\subsubsection{Application of Proximal Policy Optimization}
+PPO is widely used in robotics, computer games, and natural language processing tasks.
+
+\subsection{4.Deep Deterministic Policy Gradients (DDPG)}
+Deep Deterministic Policy Gradients (DDPG) is a model-free algorithm designed for continuous action spaces. It uses a combination of actor-critic architectures, where the actor network learns the policy, and the critic network estimates the Q-values. DDPG employs a deterministic policy and experience replay for more stable learning.
+
+\subsubsection{Application of Deep Deterministic Policy Gradients}
+DDPG has been used in robotics, autonomous vehicles, and robotic arm control.
+
+\subsection{5.Trust Region Policy Optimization (TRPO)}
+Trust Region Policy Optimization (TRPO) is another policy optimization algorithm. TRPO aims to ensure small policy updates to guarantee improvement while avoiding significant deviations. It introduces a constraint on the maximum policy update to ensure a safe and reliable policy improvement.
+
+\subsubsection{Application of Trust Region Policy Optimization}
+TRPO is used in various applications, including robotic manipulation, recommendation systems, and financial trading.
+
+\section{Ensemble Learning}
+Ensemble Learning is a machine learning technique that combines multiple models to improve prediction accuracy and robustness. Two popular methods of ensemble learning are Bagging and Boosting.
+
+\section{Bagging (Bootstrap Aggregating)}
+Bagging involves training multiple instances of the same model with random subsets of the training data and then combining their predictions through voting or averaging. The subsets are created through a process called bootstrap sampling, where data points are randomly selected with replacement.
+
+\subsection{Example}
+Suppose we have a dataset of 1000 samples and we want to train an ensemble of decision trees using bagging. We create 5 subsets, each containing 500 samples (selected randomly with replacement). We then train 5 decision trees on these subsets independently.
+
+Now, to make a prediction for a new data point, we pass it through each of the 5 decision trees in the ensemble and take a majority vote for classification tasks or average the outputs for regression tasks. The final prediction is determined by the most common class in classification or the average value in regression.
+
+Bagging helps to reduce overfitting, stabilize the model, and improve the overall prediction accuracy by reducing the variance.
+
+\section{Boosting}
+Boosting is an ensemble method that sequentially builds multiple weak models and adjusts their weights based on their performance to focus on the misclassified instances in the training data. The weak models are often simple models like decision trees, often referred to as "weak learners."
+
+\subsection{Example}
+Let's take an example of a boosting algorithm called AdaBoost (Adaptive Boosting). Suppose we have a binary classification problem, and we start with an initial dataset of 1000 samples.
+
+\begin{enumerate}[label=\arabic*.]
+  \item We train a weak learner (e.g., a decision tree) on the entire dataset.
+  \item We evaluate the performance of the weak learner. Misclassified samples are given higher weights, so they become more important in the subsequent training iterations.
+  \item We create a new dataset for the next iteration by resampling the training data, giving higher probabilities to the misclassified samples from the previous iteration.
+  \item We train a new weak learner on the updated dataset.
+  \item We repeat steps 2 to 4 for a predefined number of iterations or until a stopping criterion is met.
+  \item Finally, we combine the predictions of all weak learners with weighted voting, where the weights are determined by the performance of each weak learner.
+\end{enumerate}
+
+Boosting allows the ensemble to focus on the hard-to-classify examples, making it more accurate than individual weak learners. It adapts to the errors made by previous models, improving the overall performance.
+
+
+\end{document}
+
+\end{document}
+
+
+\section{Introduction}
+
+\end{document}
